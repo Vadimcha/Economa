@@ -1,0 +1,3 @@
+.paragraph:target {
+  scroll-margin-top: 75px;
+}
