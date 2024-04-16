@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 export const Header = ({ opened, toggle }: { opened: boolean, toggle: () => void }) => {
     const navigate = useNavigate()
     return (
-        <AppShell.Header>
+        <AppShell.Header px={"xl"}>
             <Group h="100%" px="md">
                 <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
                 <Group justify="space-between" style={{ flex: 1 }}>

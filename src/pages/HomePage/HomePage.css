@@ -1,0 +1,10 @@
+.link {
+  border: 1px solid grey;
+  padding: 20px 40px;
+  border-radius: 10px;
+  transition: .2s ease-in-out all;
+}
+
+.link:hover {
+  background-color: grey;
+}

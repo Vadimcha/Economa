@@ -1,6 +1,7 @@
-import {Button, Center, Flex, Text} from "@mantine/core";
+import {Center, Flex, Text, UnstyledButton} from "@mantine/core";
 import {INavLink, NavLinksData} from "../../data/NavLinksData";
 import {useNavigate} from "react-router-dom";
+import './HomePage.css'
 
 export const HomePage = () => {
     const navigate = useNavigate()
@@ -10,7 +11,15 @@ export const HomePage = () => {
             <Flex gap={50} justify={"space-between"} mt={"md"}>
                 { NavLinksData.map((link: INavLink) => {
                     return (
-                        link.src != '/' && <Button key={link.src} onClick={() => navigate(link.src)}>{link.name}</Button>
+                        link.src != '/'
+                        &&
+                        <UnstyledButton
+                            className={"link"}
+                            key={link.src}
+                            onClick={() => navigate(link.src)}
+                        >
+                            <Text size={"1.3rem"}>{link.name}</Text>
+                        </UnstyledButton>
                     )
                 }) }
             </Flex>
