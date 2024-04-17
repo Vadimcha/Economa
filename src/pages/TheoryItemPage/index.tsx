@@ -31,7 +31,7 @@ export const TheoryItemPage = () => {
                         { data.sections.map((paragraph: ISection, index) => {
                             return <Container key={index} mt={"xl"} id={`${data.name}-${index}`} className={"paragraph"}>
                                 <Title order={4}>{paragraph.title}</Title>
-                                <Text size={"sm"} fw={400} mt={"xs"}>{paragraph.content}</Text>
+                                <Text size={"sm"} fw={400} mt={"lg"}>{paragraph.content}</Text>
                             </Container>
                         }) }
                     </Container>

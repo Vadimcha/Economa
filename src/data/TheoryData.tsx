@@ -1,16 +1,81 @@
 import {ITheoryItem} from "../models/ITheoryItem";
-import {Text} from "@mantine/core";
+import {Space, Text, Table} from "@mantine/core";
 
+// @ts-ignore
 export const TheoryData = [
     {
-        src_name: "english-name",
-        name: "Какая-то теория",
-        description: "Описание",
+        src_name: "theory-for-ege",
+        name: "Теория для ЕГЭ",
         image: "https://i.pinimg.com/236x/2a/f5/3d/2af53d8f1be483dd0e05b7b18142c33c.jpg",
         sections: [
             {
-                title: "Lorem ipsum dolor sit amet",
-                content: <Text>Morbi tempor neque erat, a vestibulum erat iaculis in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam non maximus ligula. Fusce sed vehicula augue. Aliquam vitae sem pulvinar, ullamcorper nunc vel, gravida nisi. In auctor leo magna. Nulla dignissim finibus vulputate. Vestibulum suscipit vulputate massa, sed euismod massa tempor eleifend. Curabitur quis enim nibh. Donec malesuada gravida elit, in vestibulum nibh tristique ut. Mauris ornare vitae odio non imperdiet. Ut pretium velit sit amet placerat cursus.</Text> ,
+                title: "Аннуитетные платежи",
+                content: <div>
+                    <Text>Аннуитетный платеж – это такая система выплат, при которой кредит выплачивается ежегодно (ежемесячно) равными платежами. При этом каждый год (месяц) до внесения платежа банк начисляет на оставшуюся часть долга некоторый процент, то есть оставшаяся сумма долга увеличивается на это количество процентов.</Text>
+                    <Space h={"xl"} />
+                    <Text>Выведем общую формулу для аннуитетных платежей. Уже по уравнениям из предыдущих примеров должно стать понятно, как она выглядит. Но все же приведем ее вывод.</Text>
+                    <Space h={"sm"} />
+                    <Text fw={700}>Вывод формулы:</Text>
+                    <Space h={"sm"} />
+                    <Text>Пусть клиент взял в банке A руб. в кредит на n лет. Годовая процентная ставка в банке r% . Выплачивать кредит необходимо равными ежегодными платежами.</Text>
+                    <Space h={"sm"} />
+                    <Text>Обозначим <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mstyle displaystyle="true" scriptlevel="0">
+                            <mfrac>
+                                <mrow>
+                                    <mn>100</mn>
+                                    <mo>+</mo>
+                                    <mi>r</mi>
+                                </mrow>
+                                <mn>100</mn>
+                            </mfrac>
+                        </mstyle>
+                    </math> за t :</Text>
+                    <Space h={"sm"} />
+                    <Table withTableBorder withColumnBorders>
+                        <Table.Thead>
+                            <Table.Tr>
+                                <Table.Th>Год</Table.Th>
+                                <Table.Th>Сумма долга до начисления %</Table.Th>
+                                <Table.Th>Сумма долга после начисления %</Table.Th>
+                                <Table.Th>Сумма долга после платежа %</Table.Th>
+                            </Table.Tr>
+                        </Table.Thead>
+                        <Table.Tbody>
+                            <Table.Tr>
+                                <Table.Td>1</Table.Td>
+                                <Table.Td>A</Table.Td>
+                                <Table.Td>tA</Table.Td>
+                                <Table.Td>tA - x</Table.Td>
+                            </Table.Tr>
+                            <Table.Tr>
+                                <Table.Td>1</Table.Td>
+                                <Table.Td>A</Table.Td>
+                                <Table.Td>tA</Table.Td>
+                                <Table.Td>tA - x</Table.Td>
+                            </Table.Tr>
+                            <Table.Tr>
+                                <Table.Td>1</Table.Td>
+                                <Table.Td>A</Table.Td>
+                                <Table.Td>tA</Table.Td>
+                                <Table.Td>tA - x</Table.Td>
+                            </Table.Tr>
+                            <Table.Tr>
+                                <Table.Td>1</Table.Td>
+                                <Table.Td>A</Table.Td>
+                                <Table.Td>tA</Table.Td>
+                                <Table.Td>tA - x</Table.Td>
+                            </Table.Tr>
+                            <Table.Tr>
+                                <Table.Td>1</Table.Td>
+                                <Table.Td>A</Table.Td>
+                                <Table.Td>tA</Table.Td>
+                                <Table.Td>tA - x</Table.Td>
+                            </Table.Tr>
+                        </Table.Tbody>
+                        <Table.Caption>Scroll page to see sticky thead</Table.Caption>
+                    </Table>
+                </div>,
             },
             {
                 title: "Quisque a libero ac dui ultricies finibus.",
