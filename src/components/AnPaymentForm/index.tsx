@@ -1,11 +1,12 @@
 import {useFormik} from "formik";
-import {Button, Flex, Select, Space, TextInput, Title} from "@mantine/core";
+import {Button, Center, Container, Flex, Select, Space, TextInput, Title} from "@mantine/core";
 import {useState} from "react";
 import {AnPaymentFunction} from "../../algoritms/AnPaymentFunction";
 
 export const AnPaymentForm = () => {
     const [ans, setAns] = useState<number | null>(null)
     const [reqValue, setReqValue] = useState<string>('')
+    const [error, setError] = useState<string | null>(null)
     const formik = useFormik({
         initialValues: {
             credit_sum: '',
@@ -15,7 +16,10 @@ export const AnPaymentForm = () => {
             overpayment: '',
         },
         onSubmit: (v) => {
-            console.log(v)
+            if(!reqValue) {
+                setError('Введите значение')
+                return;
+            }
             let values = {
                 Summ: Number(v.credit_sum),
                 years: Number(v.term),
@@ -28,9 +32,9 @@ export const AnPaymentForm = () => {
         }
     })
     return (
-        <div>
+        <Container px={"150px"}>
             <form onSubmit={formik.handleSubmit} >
-                <Flex direction={"column"} gap={"md"} px={"150px"}>
+                <Flex direction={"column"} gap={"md"} >
                     <TextInput
                         name={"credit_sum"}
                         label={"Сумма кредита (млн руб.)"}
@@ -69,6 +73,7 @@ export const AnPaymentForm = () => {
                     <Select
                         name={"required_value"}
                         label={`Искомая величина`}
+                        error={error}
                         required
                         placeholder={"Выберите искомую величину"}
                         data={[
@@ -79,13 +84,20 @@ export const AnPaymentForm = () => {
                             'Переплата по кредиту',
                             'Сумма выплат по кредиту'
                         ]}
-                        onChange={(value) => setReqValue(value ? value : '')}
+                        onChange={(value) => {
+                            setReqValue(value ? value : '')
+                            setError(null)
+                        }}
                     />
                     <Button type={"submit"}>Посчитать</Button>
                 </Flex>
-                <Space h={"100px"}/>
             </form>
-            {ans && <Title order={1}>{ans}</Title>}
-        </div>
+            {ans &&
+                <Container component={Center} bg={"var(--mantine-color-grey)"}>
+                    <Title order={1}>Результат: {ans}</Title>
+                </Container>
+            }
+            <Space h={"100px"}/>
+        </Container>
     );
 };

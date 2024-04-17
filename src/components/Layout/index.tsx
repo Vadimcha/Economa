@@ -3,6 +3,7 @@ import {useDisclosure} from "@mantine/hooks";
 import {Header} from "../Header";
 import {TheoryNavBar} from "../TheoryNavBar";
 import {ITheoryItem} from "../../models/ITheoryItem";
+import {Footer} from "../Footer";
 
 export const Layout = ({ children, theoryItem }: { children: React.ReactNode, theoryItem?: ITheoryItem }) => {
     const [opened, { toggle }] = useDisclosure();
@@ -19,6 +20,7 @@ export const Layout = ({ children, theoryItem }: { children: React.ReactNode, th
                     { children }
                 </Container>
             </AppShell.Main>
+            <Footer />
         </AppShell>
     );
 };
