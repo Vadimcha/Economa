@@ -4,6 +4,9 @@ export const AnPaymentFunction = ({
     let result = 0
     switch (choice) {
         case 'Срок': {
+            if (years){
+                result = years;
+            }
             result = 0
             break;
         }
@@ -39,6 +42,8 @@ export const AnPaymentFunction = ({
                 new_overpaiment = years*new_paiment-Summ
             }
             result = (years*new_overpaiment)/(years-(100/(percents))*(1-(100/(100+percents))**(years)));
+            result = Number(result.toFixed(6))
+
             break;
         }
     }
