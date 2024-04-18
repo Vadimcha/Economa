@@ -1,7 +1,6 @@
 import {ITheoryItem} from "../models/ITheoryItem";
 import {Space, Text, Table} from "@mantine/core";
 
-// @ts-ignore
 export const TheoryData = [
     {
         src_name: "theory-for-ege",
