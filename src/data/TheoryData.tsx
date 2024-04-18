@@ -48,29 +48,30 @@ export const TheoryData = [
                                 <Table.Td>tA - x</Table.Td>
                             </Table.Tr>
                             <Table.Tr>
-                                <Table.Td>1</Table.Td>
-                                <Table.Td>A</Table.Td>
-                                <Table.Td>tA</Table.Td>
+                                <Table.Td>2</Table.Td>
                                 <Table.Td>tA - x</Table.Td>
+                                <Table.Td>t(tA - x)</Table.Td>
+                                <Table.Td>t(tA - x)-x=t^2*A-tx-x</Table.Td>
                             </Table.Tr>
                             <Table.Tr>
-                                <Table.Td>1</Table.Td>
-                                <Table.Td>A</Table.Td>
-                                <Table.Td>tA</Table.Td>
-                                <Table.Td>tA - x</Table.Td>
+                                <Table.Td>3</Table.Td>
+                                <Table.Td>t^2*A-tx-x</Table.Td>
+                                <Table.Td>t(t^2*A-tx-x)</Table.Td>
+                                <Table.Td>t(t^2*A-tx-x)-x=t^3*A-t^2*x-tx-x</Table.Td>
                             </Table.Tr>
                             <Table.Tr>
-                                <Table.Td>1</Table.Td>
-                                <Table.Td>A</Table.Td>
-                                <Table.Td>tA</Table.Td>
-                                <Table.Td>tA - x</Table.Td>
+                                <Table.Td>...</Table.Td>
+                                <Table.Td>...</Table.Td>
+                                <Table.Td>...</Table.Td>
+                                <Table.Td>...</Table.Td>
                             </Table.Tr>
                             <Table.Tr>
-                                <Table.Td>1</Table.Td>
-                                <Table.Td>A</Table.Td>
-                                <Table.Td>tA</Table.Td>
-                                <Table.Td>tA - x</Table.Td>
+                                <Table.Td>n</Table.Td>
+                                <Table.Td>t^(n-1)*A-t^(n-2)*x-...-x</Table.Td>
+                                <Table.Td>t(t^(n-1)*A-t^(n-2)*x-...-x)</Table.Td>
+                                <Table.Td>t(t^(n-1)*A-t^(n-2)*x-...-x)-x</Table.Td>
                             </Table.Tr>
+                            
                         </Table.Tbody>
                         <Table.Caption>Scroll page to see sticky thead</Table.Caption>
                     </Table>
