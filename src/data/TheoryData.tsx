@@ -79,15 +79,29 @@ export const TheoryData = [
             },
             {
                 title: "Дифференцированный платеж",
-                content: <Text> Duis blandit magna vel nulla congue, ac laoreet dui semper. Quisque a cursus risus. Phasellus dignissim velit elit, nec laoreet diam pulvinar convallis. Mauris rhoncus sollicitudin tellus vitae feugiat. Vivamus non commodo erat. Vestibulum vel libero tincidunt orci iaculis placerat ac id nisl. Nulla placerat lectus felis. Maecenas volutpat massa nisi, et finibus tellus sollicitudin eu. Vivamus laoreet molestie neque, sit amet varius lectus faucibus quis. Suspendisse et mollis diam, sit amet pretium massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc pretium dapibus molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis placerat mi, dignissim accumsan dolor tincidunt vel.</Text> ,
+                content: <Text>
+                    Дифференцированный платеж – это такая система выплат, при которой сама сумма долга уменьшается равномерно, то есть на одну и ту же величину каждый год (месяц). При этом платежи каждый год разные.
+                    <Space h={"sm"} />
+                    Таким образом, если кредит взят на <b>n</b> лет, то это значит, что сумму кредита <b>A</b> разделили на <b>n</b> равных частей и что каждый год после платежа сумма долга уменьшается на <b>A*1/n</b> по сравнению с долгом на начало года.
+
+
+                </Text> ,
             },
             {
                 title: "Смешанный платеж",
-                content: <Text>Nulla euismod ante arcu, a facilisis nulla mollis vel. Proin vel purus in libero porta ultricies a vel felis. Nulla mollis ipsum sit amet justo ullamcorper, eget ultricies nisi sollicitudin. Praesent sit amet ligula a erat vestibulum euismod vitae non sem. Aenean sed tellus non sapien sagittis facilisis quis ut enim. Vestibulum posuere magna eu urna imperdiet volutpat. Phasellus hendrerit vestibulum nisl, at volutpat velit pulvinar eu. Sed sit amet lectus sit amet leo convallis euismod. Vestibulum in cursus nulla, sit amet interdum lacus. Ut eget convallis tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus est libero, in efficitur arcu tincidunt sit amet. Suspendisse ornare metus lobortis nisl venenatis dignissim.</Text> ,
+                content: <Text>
+                    Смешанный платеж - это система выплат, при которой меняются различные параметры взависимости от условия будь то выплата по кредиту (например в первые два года выплата была больше в 2 раза, чем в последние три года и т.д.), процент, сумма (например, чтобы сумма менялась в соответсвии с какой-то схемой и т.д.) и другие. </Text> ,
             },
             {
                 title: "Вклады",
-                content: <Text>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas non ultricies justo, in tempus libero. Nulla sollicitudin non augue eget dignissim. Vivamus sagittis sem sed tempor hendrerit. Sed convallis metus eget tellus rhoncus dictum. Curabitur accumsan, neque at faucibus iaculis, est sem tincidunt lectus, sit amet eleifend neque orci nec mauris.</Text> ,
+                content: <Text>
+                    Банковский вклад — это сумма денег, переданная банку на хранение с целью получить доход в виде начисленных процентов. 
+                    <Space h={"sm"} />
+                    Раз в какой-то промежуток времени (в задачах это, как правило, месяц или год) банк начисляет на текущую сумму некоторое количество <b>r%</b> процентов. Раз в год после начисления процентов клиент, как правило, имеет право доложить на счет любую сумму денег. 
+                    <Space h={"sm"} />
+                    Также клиент имеет право снимать со счета любую сумму (естественно, не превышающую имеющуюся). Время, когда он может это сделать, указывается в задаче.
+
+                </Text> ,
             },
             {
                 title: "Оптимизация",
