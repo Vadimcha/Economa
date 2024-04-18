@@ -5,7 +5,7 @@ export const TheoryData = [
     {
         src_name: "theory-for-ege",
         name: "Теория для ЕГЭ",
-        image: "https://i.pinimg.com/236x/2a/f5/3d/2af53d8f1be483dd0e05b7b18142c33c.jpg",
+        image: "https://www.kamgov.ru/files/2023/01/18/6a5419e2b4207ba931cb7d6167c41cce.jpg",
         sections: [
             {
                 title: "Аннуитетные платежи",
@@ -98,6 +98,7 @@ export const TheoryData = [
     {
         src_name: "theory-of-economics",
         name: "Теория Экономики",
+        image: "https://i.pinimg.com/564x/cf/35/91/cf3591c157824cef0e27ed092549afe0.jpg",
         sections: [
             {
                 title: "Начала экономической теории",
@@ -116,6 +117,7 @@ export const TheoryData = [
     {
         src_name: "financial-literacy",
         name: "Финансовая грамотность",
+        image: "https://i.pinimg.com/564x/20/66/52/2066527356f678e462bce6b025b59dcf.jpg",
         sections: [
             {
                 title: "Параграф 1",
