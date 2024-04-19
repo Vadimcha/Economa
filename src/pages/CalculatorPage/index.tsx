@@ -1,6 +1,7 @@
 import {Layout} from "../../components/Layout";
 import {Tabs, Title, Text, Divider} from "@mantine/core";
 import {AnPaymentForm} from "../../components/AnPaymentForm";
+import {DifPaymentForm} from "../../components/DifPaymentForm";
 
 export const CalculatorPage = () => {
     return (
@@ -31,7 +32,7 @@ export const CalculatorPage = () => {
                     <AnPaymentForm />
                 </Tabs.Panel>
                 <Tabs.Panel value="diff_payment">
-                    Messages tab content
+                    <DifPaymentForm />
                 </Tabs.Panel>
                 <Tabs.Panel value="mix_payment">
                     Settings tab content
