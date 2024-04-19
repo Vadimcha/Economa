@@ -6,6 +6,7 @@ export const AnPaymentFunction = ({
         case 'Срок': {
             if (years){
                 result = years;
+                break
             }
             result = 0
             break;
