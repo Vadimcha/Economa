@@ -7,7 +7,7 @@ import {TheoryListItem} from "../../components/TheoryListItem";
 export const TheoryPage = () => {
     return (
         <Layout>
-            <Title order={3}>Страница с теорией</Title>
+            <Title order={3}>Теория</Title>
             <SimpleGrid cols={3} mt={"xl"}>
                 { TheoryData.map((item: ITheoryItem) => {
                     return <TheoryListItem key={item.name} data={item} />

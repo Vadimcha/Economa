@@ -5,7 +5,8 @@ import {AnPaymentFunction} from "../../algoritms/AnPaymentFunction";
 import {IRow, AnPaymentRecurse} from "../../algoritms/AnPaymentRecurse";
 
 export const AnPaymentForm = () => {
-    const [ans, setAns] = useState<number | null>(null)
+    const [ans, setAns] = useState<any>(undefined)
+    const [checkAns, setCheckAns] = useState<boolean> (false)
     const [reqValue, setReqValue] = useState<string>('')
     const [error, setError] = useState<string | null>(null)
     const [tableData, setTableData] = useState<React.ReactNode> (<></>)
@@ -39,6 +40,7 @@ export const AnPaymentForm = () => {
                     <Table.Td>{row.third}</Table.Td>
                 </Table.Tr>
             ))}</Table.Tbody>)
+            setCheckAns(true)
             setAns(AnPaymentFunction(values))
         }
     })
@@ -104,10 +106,13 @@ export const AnPaymentForm = () => {
                     <Button type={"submit"}>Посчитать</Button>
                 </Flex>
             </form>
-            {ans &&
+            {checkAns ?
                 <Container component={Center} bg={"var(--mantine-color-grey)"}>
                     <Flex direction={"column"} gap={"md"}>
-                        <Title order={1}>Результат: {ans}</Title>
+                        { ans ?
+                            <Title order={1}>Результат: {ans}</Title> :
+                            <Title order={3}>К сожалению, калькулятор пока что не способен посчитать требуемое в заданных параметрах</Title>
+                        }
                         <Table withTableBorder withColumnBorders>
                             <Table.Thead>
                                 <Table.Tr>
@@ -120,7 +125,7 @@ export const AnPaymentForm = () => {
                             { tableData }
                         </Table>
                     </Flex>
-                </Container>
+                </Container> : <></>
             }
             <Space h={"100px"}/>
         </Container>

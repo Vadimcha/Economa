@@ -16,7 +16,15 @@ export const TheoryData = [
                     <Space h={"sm"} />
                     <Text fw={700}>Вывод формулы:</Text>
                     <Space h={"sm"} />
-                    <Text>Пусть клиент взял в банке <b>A</b> руб. в кредит на <b>n</b> лет. Годовая процентная ставка в банке <b>r%</b> . Выплачивать кредит необходимо равными ежегодными платежами.</Text>
+                    <Text>Пусть клиент взял в банке 
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>A</mi>
+                        </math> 
+                            руб. в кредит на <b>n</b> лет. Годовая процентная ставка в банке <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mi>r</mi>
+                                </math>%.
+                            Выплачивать кредит необходимо равными ежегодными платежами.
+                    </Text>
                     <Space h={"sm"} />
                     <Text>Обозначим <math xmlns="http://www.w3.org/1998/Math/MathML">
                         <mstyle displaystyle="true" scriptlevel="0">
@@ -73,8 +81,156 @@ export const TheoryData = [
                             </Table.Tr>
                             
                         </Table.Tbody>
-                        <Table.Caption>Scroll page to see sticky thead</Table.Caption>
+                        <Table.Caption></Table.Caption>
                     </Table>
+                    <Text>Таким образом: <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>t*</mi>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                            <mi>t</mi>
+                            <mrow>
+                            <mi>n</mi>
+                            <mo>-</mo>
+                            <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mi>A</mi>
+                        <mo>-</mo>
+                        <msup>
+                            <mi>t</mi>
+                            <mrow>
+                            <mi>n</mi>
+                            <mo>-</mo>
+                            <mn>2</mn>
+                            </mrow>
+                        </msup>
+                        <mi>x</mi>
+                        <mo>-</mo>
+                        <mo>...</mo>
+                        <mo>-</mo>
+                        <mi>x</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>-</mo>
+                        <mi>x</mi>
+                        <mo>=</mo>
+                        <mn>0, </mn>
+                        <mo stretchy="false"> </mo>
+                        <msup>
+                            <mi>t</mi>
+                            <mi>n</mi>
+                            
+                        </msup>
+                        
+                        <mi>A</mi>
+                        <mo>-</mo>
+                        <mi>x</mi>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                            <mi>t</mi>
+                            <mrow>
+                            <mi>n</mi>
+                            <mo>-</mo>
+                            <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>+</mo>
+                        <msup>
+                            <mi>t</mi>
+                            <mrow>
+                            <mi>n</mi>
+                            <mo>-</mo>
+                            <mn>2</mn>
+                            </mrow>
+                        </msup>
+                        <mo>+</mo>
+                        <mo>...</mo>
+                        <mo>+</mo>
+                        <mn>1</mn>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mn>0</mn>
+                        </math>
+
+                    </Text>
+                    <Space h={"sm"} />
+                    <Text>
+                        Значит в случае с аннуитетным платежом имеет место формула:<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <mstyle mathsize="1.2em">
+                            <mrow>
+                            <msup>
+                                <mrow>
+                                <mo>(</mo>
+                                <mfrac>
+                                    <mrow>
+                                    <mn>100</mn>
+                                    <mo>+</mo>
+                                    <mi>r</mi>
+                                    </mrow>
+                                    <mn>100</mn>
+                                </mfrac>
+                                <mo>)</mo>
+                                </mrow>
+                                <mi>n</mi>
+                            </msup>
+                            <mo>*</mo>
+                            <mi>A</mi>
+                            <mo>-</mo>
+                            <mi>x</mi>
+                            <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                <msup>
+                                    <mrow>
+                                    <mo>(</mo>
+                                    <mfrac>
+                                        <mrow>
+                                        <mn>100</mn>
+                                        <mo>+</mo>
+                                        <mi>r</mi>
+                                        </mrow>
+                                        <mn>100</mn>
+                                    </mfrac>
+                                    <mo>)</mo>
+                                    </mrow>
+                                    <mrow>
+                                    <mi>n</mi>
+                                    <mo>-</mo>
+                                    <mn>1</mn>
+                                    </mrow>
+                                </msup>
+                                <mo>+</mo>
+                                <msup>
+                                    <mrow>
+                                    <mo>(</mo>
+                                    <mfrac>
+                                        <mrow>
+                                        <mn>100</mn>
+                                        <mo>+</mo>
+                                        <mi>r</mi>
+                                        </mrow>
+                                        <mn>100</mn>
+                                    </mfrac>
+                                    <mo>)</mo>
+                                    </mrow>
+                                    <mrow>
+                                    <mi>n</mi>
+                                    <mo>-</mo>
+                                    <mn>2</mn>
+                                    </mrow>
+                                </msup>
+                                <mo>+</mo>
+                                <mo>...</mo>
+                                <mo>+</mo>
+                                <mn>1</mn>
+                                </mrow>
+                                <mo>)</mo>
+                            </mrow>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                            </mrow>
+                        </mstyle>
+                        </math>
+                    </Text>
                 </div>,
             },
             {

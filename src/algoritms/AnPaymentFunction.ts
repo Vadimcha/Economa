@@ -48,5 +48,8 @@ export const AnPaymentFunction = ({
             break;
         }
     }
+    if (result==0){
+        result=Number("К сожалению, калькулятор пока что не способен посчитать требуемое в заданных параметрах")
+    }
     return result
 }
