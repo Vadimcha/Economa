@@ -4,7 +4,8 @@ import {Button, Center, Container, Flex, Select, Space, TextInput, Title} from "
 import {DifPaymentFunction} from "../../algoritms/DifPaymentFunction";
 
 export const DifPaymentForm = () => {
-    const [ans, setAns] = useState<number | null>(null)
+    const [ans, setAns] = useState<number | undefined>(undefined)
+    const [checkAns, setCheckAns] = useState<boolean> (false)
     const [reqValue, setReqValue] = useState<string>('')
     const [error, setError] = useState<string | null>(null)
     const [yearError, setYearError] = useState<string | null>(null)
@@ -32,6 +33,7 @@ export const DifPaymentForm = () => {
                 summa_credit: Number(v.summa_credit),
                 selected_year: Number(v.selected_year)
             }
+            setCheckAns(true)
             setAns(DifPaymentFunction(values))
         }
     })
@@ -102,9 +104,12 @@ export const DifPaymentForm = () => {
                     <Button type={"submit"}>Посчитать</Button>
                 </Flex>
             </form>
-            {ans &&
+            {checkAns &&
                 <Container component={Center} bg={"var(--mantine-color-grey)"}>
-                    <Title order={1}>Результат: {ans}</Title>
+                    { ans ?
+                        <Title order={1}>Результат: {ans}</Title> :
+                        <Title order={3}>К сожалению, калькулятор пока что не способен посчитать требуемое в заданных параметрах</Title>
+                    }
                 </Container>
             }
             <Space h={"100px"}/>

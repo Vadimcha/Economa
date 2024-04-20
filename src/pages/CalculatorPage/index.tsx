@@ -1,12 +1,12 @@
 import {Layout} from "../../components/Layout";
-import {Tabs, Title, Text, Divider} from "@mantine/core";
+import {Tabs, Text, Divider} from "@mantine/core";
 import {AnPaymentForm} from "../../components/AnPaymentForm";
 import {DifPaymentForm} from "../../components/DifPaymentForm";
 
 export const CalculatorPage = () => {
     return (
         <Layout>
-            <Title order={2} mb={"xl"}>Калькулятор</Title>
+            <Text size={"2rem"} fw={600} mb={"md"}>Калькулятор</Text>
             <Tabs variant="pills" radius="md" defaultValue="an_payment">
                 <Tabs.List>
                     <Tabs.Tab value="an_payment" >
