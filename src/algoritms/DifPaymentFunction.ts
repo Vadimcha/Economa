@@ -40,7 +40,7 @@ export const DifPaymentFunction =
             case 'Величина выплаты в определенный год': {
             
 
-                let result = (percents/100)*(years-selected_year+1)/summa_credit+(summa_credit)/years 
+                let result = (percents/100)*summa_credit*(years-selected_year+1)/years+(summa_credit)/years 
                 return Number(result.toFixed(6));
                 break
             }
