@@ -42,6 +42,7 @@ export const AnPaymentForm = () => {
                 setTableData(
                     <div>
                         <Text>Таблица изображающая схему выплаты</Text>
+                        <Space h={"sm"} />
                         <Table withTableBorder withColumnBorders>
                             <Table.Thead>
                                 <Table.Tr>
@@ -62,6 +63,7 @@ export const AnPaymentForm = () => {
                                 ))}
                             </Table.Tbody>
                         </Table>
+                        <Space h={"sm"} />
                         <Text mb="md">A - сумма кредита, t - множитель процентов, x - ежегодная выплата</Text>
                         <Button onClick={() => navigate('/theory/theory-for-ege#Теория%20для%20ЕГЭ-0')}>Как это работает?</Button>
                     </div>

@@ -64,7 +64,7 @@ export const DifPaymentForm = () => {
                     />
                     <TextInput
                         name={"summa_credit"}
-                        label={"Сумма кридита (млн руб.)"}
+                        label={"Сумма кредита (млн руб.)"}
                         placeholder={"Введите сумму кредита"}
                         value={formik.values.summa_credit}
                         onChange={formik.handleChange}
