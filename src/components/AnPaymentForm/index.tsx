@@ -1,16 +1,17 @@
 import {useFormik} from "formik";
 import {Button, Center, Container, Flex, Select, Space, Table, TextInput, Title, Text} from "@mantine/core";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {AnPaymentFunction} from "../../algoritms/AnPaymentFunction";
 import {IRow, AnPaymentRecurse} from "../../algoritms/AnPaymentRecurse";
+import {useNavigate} from "react-router-dom";
 
 export const AnPaymentForm = () => {
     const [ans, setAns] = useState<any>(undefined)
     const [checkAns, setCheckAns] = useState<boolean> (false)
     const [reqValue, setReqValue] = useState<string>('')
-    const [yearError, setYearError] = useState<string>('')
     const [error, setError] = useState<string | null>(null)
     const [tableData, setTableData] = useState<React.ReactNode> (<></>)
+    const navigate = useNavigate()
     const formik = useFormik({
         initialValues: {
             credit_sum: '',
@@ -33,14 +34,10 @@ export const AnPaymentForm = () => {
                 overpayment: Number(v.overpayment),
                 choice: reqValue
             }
-            if(values.years && values.years > 9) {
-                setYearError("Введите значение от 1 до 10")
-                return;
-            }
             const Ans = AnPaymentFunction(values)
             setCheckAns(true)
             setAns(Ans)
-            if(Ans && values.years && values.percents && (values.payment || values.Summ)) {
+            if(Ans && values.years && values.years <= 10 && values.percents && (values.payment || values.Summ)) {
                 const d = AnPaymentRecurse(values.years)
                 setTableData(
                     <div>
@@ -65,13 +62,13 @@ export const AnPaymentForm = () => {
                                 ))}
                             </Table.Tbody>
                         </Table>
-                        <Text>A - сумма кредита, t - процент кредита, x - ежегодная выплата</Text>
+                        <Text mb="md">A - сумма кредита, t - множитель процентов, x - ежегодная выплата</Text>
+                        <Button onClick={() => navigate('/theory/theory-for-ege#Теория%20для%20ЕГЭ-0')}>Как это работает?</Button>
                     </div>
                 );
             }
         }
     })
-    useEffect(() => {console.log(tableData)}, [tableData])
     return (
         <Container px={"150px"}>
             <form onSubmit={formik.handleSubmit} >
@@ -86,13 +83,9 @@ export const AnPaymentForm = () => {
                     <TextInput
                         name={"term"}
                         label={"Срок кредита"}
-                        error={yearError}
                         placeholder={"Введите срок на который берётся кредит"}
                         value={formik.values.term}
-                        onChange={(e: React.ChangeEvent<any>) => {
-                            formik.handleChange(e)
-                            setYearError('')
-                        }}
+                        onChange={formik.handleChange}
                     />
                     <TextInput
                         name={"percent"}

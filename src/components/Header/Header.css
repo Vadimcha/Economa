@@ -1,0 +1,7 @@
+.btn {
+  transition: color .3s ease-in-out;
+}
+
+.btn:hover {
+  color: var(--mantine-color-blue-2);
+}
