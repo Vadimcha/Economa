@@ -4,12 +4,20 @@ export const DifPaymentFunction =
         let result = 0
         switch (choice) {
             case 'Срок': {
+                if (years){
+                    return years;
+                    break
+                }
                 let result = undefined
                 return result
 
                 break
             }
             case 'Сумма кредита': {
+                if (summa_credit){
+                    return summa_credit;
+                    break
+                }
                 let result = undefined
                 return result
 
@@ -17,6 +25,10 @@ export const DifPaymentFunction =
                 
             }
             case 'Процент кредита': {
+                if (percents){
+                    return percents;
+                    break
+                }
                 let result = undefined
                 return result
                 break
@@ -33,6 +45,7 @@ export const DifPaymentFunction =
                 break
             }
             case 'Переплата по кредиту': {
+            
                 let result = (percents/100)*summa_credit*(years+1)/2
                 return Number(result.toFixed(6))
                 break

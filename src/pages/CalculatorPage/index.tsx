@@ -35,13 +35,13 @@ export const CalculatorPage = () => {
                     <DifPaymentForm />
                 </Tabs.Panel>
                 <Tabs.Panel value="mix_payment">
-                    Settings tab content
+                    В данный момент идет разработка этой опции...
                 </Tabs.Panel>
                 <Tabs.Panel value="deposits">
-                    Settings tab content
+                    В данный момент идет разработка этой опции...
                 </Tabs.Panel>
                 <Tabs.Panel value="optimization">
-                    Settings tab content
+                    В данный момент идет разработка этой опции...
                 </Tabs.Panel>
             </Tabs>
         </Layout>

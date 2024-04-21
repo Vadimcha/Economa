@@ -16,11 +16,9 @@ export const TheoryData = [
                     <Space h={"sm"} />
                     <Text fw={700}>Вывод формулы:</Text>
                     <Space h={"sm"} />
-                    <Text>Пусть клиент взял в банке 
-                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <Text>Пусть клиент взял в банке <math xmlns="http://www.w3.org/1998/Math/MathML">
                             <mi>A</mi>
-                        </math> 
-                            руб. в кредит на <b>n</b> лет. Годовая процентная ставка в банке <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        </math> руб. в кредит на <b>n</b> лет. Годовая процентная ставка в банке <math xmlns="http://www.w3.org/1998/Math/MathML">
                                         <mi>r</mi>
                                 </math>%.
                             Выплачивать кредит необходимо равными ежегодными платежами.
@@ -261,7 +259,7 @@ export const TheoryData = [
             },
             {
                 title: "Оптимизация",
-                content: <Text>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas non ultricies justo, in tempus libero. Nulla sollicitudin non augue eget dignissim. Vivamus sagittis sem sed tempor hendrerit. Sed convallis metus eget tellus rhoncus dictum. Curabitur accumsan, neque at faucibus iaculis, est sem tincidunt lectus, sit amet eleifend neque orci nec mauris.</Text> ,
+                content: <Text>Некоторые экономические задачи требуют рассчитать максимальное или минимально значение того или иного параметра. Такие задачи относят к задачам на оптимизацию (то есть на нахождение наибольшего или наименьшего значения). Большинство из них решается составлением т.н. целевой функции, нахождением ее производной и точек максимума или минимума.</Text> ,
             },
         ],
     },
