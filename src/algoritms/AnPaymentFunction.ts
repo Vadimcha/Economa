@@ -40,7 +40,7 @@ export const AnPaymentFunction = ({
             return undefined
             break;
         }
-        case 'Ежегодная выплата по кредиту': {
+        case 'Ежегодная/ежемесячная выплата по кредиту': {
             if (payment){
                 return payment;
                 break

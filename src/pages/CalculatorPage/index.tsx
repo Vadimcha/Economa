@@ -39,7 +39,7 @@ export const CalculatorPage = () => {
                 </Tabs.Panel>
                 <Tabs.Panel value="deposits">
                     В данный момент идет разработка этой опции...
-                </Tabs.Panel>
+                </Tabs.Panel>   
                 <Tabs.Panel value="optimization">
                     В данный момент идет разработка этой опции...
                 </Tabs.Panel>

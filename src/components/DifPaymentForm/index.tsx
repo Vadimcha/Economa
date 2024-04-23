@@ -81,14 +81,14 @@ export const DifPaymentForm = () => {
                             'Процент кредита',
                             'Сумма выплат',
                             'Переплата по кредиту',
-                            'Величина выплаты в определенный год',
+                            'Величина выплаты в определенный год/месяц',
                         ]}
                         onChange={(value) => {
                             setReqValue(value ? value : '')
                             setError(null)
                         }}
                     />
-                    { reqValue == 'Величина выплаты в определенный год' ?
+                    { reqValue == 'Величина выплаты в определенный год/месяц' ?
                         <TextInput
                             required
                             name={"selected_year"}

@@ -50,7 +50,7 @@ export const DifPaymentFunction =
                 return Number(result.toFixed(6))
                 break
             }
-            case 'Величина выплаты в определенный год': {
+            case 'Величина выплаты в определенный год/месяц': {
             
 
                 let result = (percents/100)*summa_credit*(years-selected_year+1)/years+(summa_credit)/years 
