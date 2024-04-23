@@ -237,7 +237,141 @@ export const TheoryData = [
                     Дифференцированный платеж – это такая система выплат, при которой сама сумма долга уменьшается равномерно, то есть на одну и ту же величину каждый год (месяц). При этом платежи каждый год разные.
                     <Space h={"sm"} />
                     Таким образом, если кредит взят на <b>n</b> лет, то это значит, что сумму кредита <b>A</b> разделили на <b>n</b> равных частей и что каждый год после платежа сумма долга уменьшается на <b>A*1/n</b> по сравнению с долгом на начало года.
+                    <Space h={"sm"} />
+                    Пусть кредит взят на <b>A</b> рублей, на <b>n</b> лет, годовая ставка <b>r%</b>.
+                    <Space h={"sm"} />
+                    Значит, каждый год долг должен уменьшаться <b>(1/n)*A</b> рублей. К тому же, например, в первый год после начисления процентов долг составит <b>A+(r/100)*A</b>, поэтому обозначим для удобства <b>(r/100)=t</b> и составим таблицу:
+                    <Space h={"sm"} />
 
+                    <Table withTableBorder withColumnBorders>
+                        <Table.Thead>
+                            <Table.Tr>
+                                <Table.Th>Год</Table.Th>
+                                <Table.Th>Сумма долга до начисления %</Table.Th>
+                                <Table.Th>Сумма долга после начисления %</Table.Th>
+                                <Table.Th>Сумма долга после платежа %</Table.Th>
+                                <Table.Th>Выплата</Table.Th>
+                            </Table.Tr>
+                        </Table.Thead>
+                        <Table.Tbody>
+                            <Table.Tr>
+                                <Table.Td>1</Table.Td>
+                                <Table.Td>A</Table.Td>
+                                <Table.Td>A+tA</Table.Td>
+                                <Table.Td>A*(n-1)/n</Table.Td>
+                                <Table.Td>t*A+A*(1/n)</Table.Td>
+                            </Table.Tr>
+                            <Table.Tr>
+                                <Table.Td>2</Table.Td>
+                                <Table.Td>A*(n-1)/n</Table.Td>
+                                <Table.Td>A*(n-1)/n+ t*A*(n-1)/n</Table.Td>
+                                <Table.Td>A*(n-2)/n</Table.Td>
+                                <Table.Td>t*A*(n-1)/n+A*(1/n)</Table.Td>
+                            </Table.Tr>
+                            <Table.Tr>
+                                <Table.Td>3</Table.Td>
+                                <Table.Td>A*(n-2)/n</Table.Td>
+                                <Table.Td>A*(n-2)/n+ t*A*(n-2)/n</Table.Td>
+                                <Table.Td>A*(n-3)/n</Table.Td>
+                                <Table.Td>A*(n-3)/n+A*(1/n)</Table.Td>
+                            </Table.Tr>
+                            <Table.Tr>
+                                <Table.Td>...</Table.Td>
+                                <Table.Td>...</Table.Td>
+                                <Table.Td>...</Table.Td>
+                                <Table.Td>...</Table.Td>
+                                <Table.Td>...</Table.Td>
+                            </Table.Tr>
+                            <Table.Tr>
+                                <Table.Td>n-1</Table.Td>
+                                <Table.Td>(2/n)*A</Table.Td>
+                                <Table.Td>(2/n)*A+y*(2/n)*A</Table.Td>
+                                <Table.Td>(1/n)*A</Table.Td>
+                                <Table.Td>t*(2/n)*A+(1/n)*A</Table.Td>
+                            </Table.Tr>
+                            <Table.Tr>
+                                <Table.Td>n</Table.Td>
+                                <Table.Td>(1/n)*A</Table.Td>
+                                <Table.Td>(1/n)*A+t*(1/n)*A</Table.Td>
+                                <Table.Td>0</Table.Td>
+                                <Table.Td>t*(1/n)*A+(1/n)*A</Table.Td>
+                            </Table.Tr>
+                            
+                        </Table.Tbody>
+                        <Table.Caption></Table.Caption>
+                    </Table>
+                    <Space h={"sm"} />
+                    Таким образом, если i - номер года, то выплата i-ый год будет равна: <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <msub>
+                        <mi>x</mi>
+                        <mi>i</mi>
+                    </msub>
+                    <mo>=</mo>
+                    <mi>y</mi>
+                    <mo>&#x22C5;</mo>
+                    <mfrac>
+                        <mrow>
+                        <mi>n</mi>
+                        <mo>&#x2212;</mo>
+                        <mo stretchy="false">(</mo>
+                        <mi>i</mi>
+                        <mo>&#x2212;</mo>
+                        <mn>1</mn>
+                        <mo stretchy="false">)</mo>
+                        </mrow>
+                        <mi>n</mi>
+                    </mfrac>
+                    <mi>A</mi>
+                    <mo>+</mo>
+                    <mstyle displaystyle="true" scriptlevel="0">
+                        <mfrac>
+                        <mn>1</mn>
+                        <mi>n</mi>
+                        </mfrac>
+                    </mstyle>
+                    <mi>A</mi>
+                    </math>, или:
+                    <Space h={"sm"} />
+                                        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                    <mstyle mathsize="1.2em">
+                        <mrow>
+                        <msub>
+                            <mi>x</mi>
+                            <mi>i</mi>
+                        </msub>
+                        <mo>=</mo>
+                        <mstyle displaystyle="true" scriptlevel="0">
+                            <mfrac>
+                            <mi>r</mi>
+                            <mn>100</mn>
+                            </mfrac>
+                        </mstyle>
+                        <mo>&#x22C5;</mo>
+                        <mstyle displaystyle="true" scriptlevel="0">
+                            <mfrac>
+                            <mrow>
+                                <mi>n</mi>
+                                <mo>&#x2212;</mo>
+                                <mi>i</mi>
+                                <mo>+</mo>
+                                <mn>1</mn>
+                            </mrow>
+                            <mi>n</mi>
+                            </mfrac>
+                        </mstyle>
+                        <mi>A</mi>
+                        <mo>+</mo>
+                        <mstyle displaystyle="true" scriptlevel="0">
+                            <mfrac>
+                            <mn>1</mn>
+                            <mi>n</mi>
+                            </mfrac>
+                        </mstyle>
+                        <mi>A</mi>
+                        </mrow>
+                    </mstyle>
+                    </math>
+                    
 
                 </Text> ,
             },
@@ -271,12 +405,42 @@ export const TheoryData = [
             {
                 title: "Экономическая теория как наука",
                 content: <Text fw={0}>
+                                                <b><i>Экономическая теория</i></b> – фундаментальная наука, раскрывающая
+                            законы, управляющие развитием производства, распределения, обмена и
+                            потребления, и поэтому является методологической основой всей системы
+                            экономических наук
+                            <Space h={"sm"} />
+                                                <b><i>Экономическая теория</i></b> — наука об эффективном использовании
+                            ограниченных ресурсов. Эффективность - это одно из базовых понятий
+                            экономической науки, которое дает возможность исследовать развитие
+                            общественного производства. 
+                            <Space h={"sm"} />
 
                             Хозяйственная деятельность людей представляет собой сложный
                             и запутанный комплекс разнообразных явлений и процессов, в котором теоретическая экономика выделяет четыре стадии: собственно
                             производство, распределение, обмен и потребление.
                             <Space h={"sm"} />
+                                                        Если посмотреть на домохозяйство с точки зрения удовлетворения его
+                            материальных потребностей, то в качестве цели будет выступать
+                            максимизация удовлетворения потребностей, а в качестве средств ее
+                            достижения – максимизация дохода домохозяйства
+                                <Space h={"sm"} />
+                                                            Экономическая эффективность домохозяйства = Максимизация
+                            удовлетворения потребностей при оптимизации как структуры /
+                            Максимизация дохода домохозяйства при минимизации затрат
+                            ресурсов.
+                            <Space h={"sm"} />
+                            Экономическая эффективность фирмы = Максимизация прибыли /
+                            минимизация издержек
+                            <Space h={"sm"} />
+                            Главной целью компании является максимизация прибыли, которая
+                            является результатом производства. Средствами ее достижения являются
+                            затраты фирмы, которые в экономической теории называется издержками. В
+                            реальной хозяйственной практике она измеряется через норму прибыли:
+                            <Space h={"sm"} />
+                            Норма прибыли = ( Величина прибыли / величина издержек ) * 100%  
 
+                            <Space h={"sm"} />    
 
                             <i><b>Производство</b></i> — это процесс создания материальных и духовных благ, необходимых для существования и развития человека.
                             <Space h={"sm"} />
