@@ -66,17 +66,18 @@ export const AnPaymentFunction = ({
         }
         case 'Сумма выплат по кредиту': {
             
-            let new_paiment = payment, new_overpayment = overpayment
+            let new_payment = payment, new_overpayment = overpayment
             let percents2 = (100+percents)/100
             
             if (!Summ){
                 Summ = payment * ((percents2**years-1)/(percents2**(years)*(percents2-1)))
             }
             if (!payment){
-                payment = Summ*(percents2-1)*(percents2**years)/(percents2**years-1)
+                new_payment = Summ*(percents2-1)*(percents2**years)/(percents2**years-1)
             }
             if(!overpayment) {
-                new_overpayment = years*new_paiment-Summ
+                new_overpayment = years*new_payment-Summ
+                
             }
             let result = new_overpayment+Summ;
             return result = Number(result.toFixed(6))

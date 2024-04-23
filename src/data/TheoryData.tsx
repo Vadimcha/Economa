@@ -269,17 +269,44 @@ export const TheoryData = [
         image: "https://i.pinimg.com/564x/cf/35/91/cf3591c157824cef0e27ed092549afe0.jpg",
         sections: [
             {
-                title: "Начала экономической теории",
-                content: <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis distinctio fuga, dolor ullam ad fugiat incidunt autem ducimus perspiciatis voluptates? Molestias sunt quod eum quibusdam, aliquam minus aut illo sapiente.</Text> ,
+                title: "Экономическая теория как наука",
+                content: <Text fw={0}>
+
+                            Хозяйственная деятельность людей представляет собой сложный
+                            и запутанный комплекс разнообразных явлений и процессов, в котором теоретическая экономика выделяет четыре стадии: собственно
+                            производство, распределение, обмен и потребление.
+                            <Space h={"sm"} />
+
+
+                            <i><b>Производство</b></i> — это процесс создания материальных и духовных благ, необходимых для существования и развития человека.
+                            <Space h={"sm"} />
+
+                            <i><b>Распределение</b></i> — это процесс определения доли, количества,
+                            пропорции, в которой каждый хозяйственный субъект принимает
+                            участие в произведенном продукте.
+                            <Space h={"sm"} />
+
+                            <i><b>Обмен</b></i> — это процесс движения материальных благ и услуг от
+                            одного субъекта к другому и форма общественной связи производителей и потребителей, опосредствующая общественный обмен
+                            веществ.
+                            <Space h={"sm"} />
+
+                            <i><b>Потребление</b></i> — это процесс использования результатов производства для удовлетворения определенных потребностей.
+                </Text> ,
             },
             {
-                title: "Параграф 1",
-                content: <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, doloribus magnam. Assumenda tenetur pariatur exercitationem, voluptate commodi dolor non repellendus rerum. Totam doloribus ratione, eveniet sapiente at nisi ipsum quas!</Text> ,
+                title: "Теория поведения потребителя",
+                content: <Text>Находится в разработке...</Text> ,
             },
             {
-                title: "Параграф 2",
-                content: <Text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, sed! Odit nemo tempore nam delectus a pariatur neque ab itaque enim rerum porro, perferendis modi accusantium molestias sint officiis reprehenderit.</Text> ,
+                title: "Теория фирмы",
+                content: <Text>Находится в разработке...</Text> ,
             },
+            {
+                title: "Теория рынков и рыночных структур",
+                content: <Text>Находится в разработке...</Text> ,
+            },
+            
         ],
     },
     {
@@ -288,16 +315,79 @@ export const TheoryData = [
         image: "https://i.pinimg.com/564x/20/66/52/2066527356f678e462bce6b025b59dcf.jpg",
         sections: [
             {
-                title: "Параграф 1",
-                content: <Text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, maiores voluptas. Amet temporibus quae, eius consectetur quasi asperiores quis porro veritatis modi, saepe sunt dicta atque iusto libero, possimus ex.</Text> ,
+                title: "Банковская и налоговая системы",
+                content: <Text fw={100}>В повседневной жизни каждый человек так или иначе сталкивается с работой финансовых организаций.
+                     <Space h={"sm"} />
+                    <i><b>Финансовая организация</b></i> — это специальная организация, которая на основании государственного разрешения (его называют лицензией) предоставляет различного рода услуги, связанные с использованием и перемещением денежных средств от одного клиента к другому. Такие услуги называются <i><b>финансовыми</b></i>.
+                    <Space h={"sm"} />
+                    К финансовым услугам относятся:
+                    <ul>
+                        <li>-Банковские услуги</li>
+                        <li>-Страховые услуги</li>
+                        <li>-Услуги по пенсионному накоплению</li>
+                        <li>-Покупа и продажа ценных бумаг</li>
+                    </ul>
+                    <Space h={"sm"} />
+
+                    Финансовые организации в качестве основной цели своей деятельности рассматривают привлечение свободных денежных средств граждан и предоставление денежных средств в долг тем, кто в них нуждается.
+                    <Space h={"sm"} />
+
+
+                    К финансовым организациям относят:
+                    <ul>
+                        <li>-Банки</li>
+                        <li>-Страховые компании</li>
+                        <li>-Пенсионные фонды</li>
+                        <li>-Кредитные союзы</li>
+                        <li>-Инвестиционные фонды, компании по доверительному управлению средствами инвесторов</li>
+                        <li>-Брокерские компании</li>
+                        <li>-Дилерские компании</li>
+                        <li>-Фондовые биржи</li>
+                    </ul>
+                    <Space h={"sm"} />
+
+                    Рассмотрение деятельности финансовых организаций начнём с банков, так как среди населения услуги этих финансовых организаций наиболее востребованы
+                    <Space h={"sm"} />
+                    К основной деятельности банков относят:
+                    <ul>
+                        <li>-Кредитные услуги (предоставление кредитов)</li>
+                        <li>-Расчетные операции (осуществление платежей по поручению держателей, вкладчиков и т.д.)</li>
+                        <li>-Кассовые операции (прием и выдача денежных средств)</li>
+                        <li>-Комиссионные операции (выдача клиентам поручений по операциям, связанных с куплей-продажей)</li>
+                        <li>-Курсовые операции (покупка и продажа иностранной валюты и ценных бумаг)</li>
+                        <li>-Финансовые операции</li>
+                    </ul>
+                    <Space h={"sm"} />
+                    К банковским организациям также относятся специальные клиринговые учреждения и лизинговые компании
+
+                    
+
+                    
+                </Text> ,
             },
             {
-                title: "Параграф 2",
-                content: <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quae corporis minima aliquid consequuntur asperiores corrupti eius suscipit mollitia, error, exercitationem quod ipsa cum, magni earum sit? Esse, totam sunt.</Text> ,
+                title: "Риски и финансовая безопасность",
+                content: <Text>Находится в разработке...</Text> ,
             },
             {
-                title: "Параграф 3",
-                content: <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odio perspiciatis possimus sed veniam a nisi fugiat est. Sed inventore nam suscipit reprehenderit alias eveniet deleniti dolorem voluptatum iusto mollitia.</Text> ,
+                title: "Кредитование",
+                content: <Text>Находится в разработке...</Text> ,
+            },
+            {
+                title: "Страхование",
+                content: <Text>Находится в разработке...</Text> ,
+            },
+            {
+                title: "Пенсионное накопление",
+                content: <Text>Находится в разработке...</Text> ,
+            },
+            {
+                title: "Финансовые механизмы предприятия",
+                content: <Text>Находится в разработке...</Text> ,
+            },
+            {
+                title: "Организация и ведение собственные бизнеса",
+                content: <Text>Находится в разработке...</Text> ,
             },
         ],
     },
